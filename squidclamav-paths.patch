@@ -10,6 +10,6 @@ diff -ur squidclamav-1.2.orig/paths.h squidclamav-1.2/paths.h
  
  /*************  Configuration file locations  ***********/
 -#define REDIRECT_PATTERNS "/usr/local/squidclamav/etc/squidclamav.conf"
-+#define REDIRECT_PATTERNS "/etc/squidclamav.conf"
++#define REDIRECT_PATTERNS "/etc/squid/squidclamav.conf"
  
  #endif

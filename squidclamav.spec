@@ -1,3 +1,6 @@
+# TODO:
+# - get rid of internal copies of regex library
+# /TODO
 Summary:	A Clamav Antivirus Redirector for Squid
 Summary(pl):	Skaner antywirusowy clamav dla Squida
 Name:		squidclamav
@@ -11,7 +14,10 @@ Patch0:		%{name}-paths.patch
 URL:		http://www.samse.fr/GPL/squidclamav/
 BuildRequires:	clamav-devel >= 0.82
 BuildRequires:	curl-devel >= 7.12.1
+Requires:	squid
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_sysconfdir	/etc/squid
 
 %description
 A Clamav Antivirus Redirector for Squid.
