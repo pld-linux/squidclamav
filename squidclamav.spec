@@ -6,7 +6,7 @@ License:	GPL v2
 Version:	1.2
 Release:	0.1
 Source0:	http://www.samse.fr/GPL/squidclamav/%{name}-%{version}.tar.gz
-# Source0-md5:	9395bc94613d33cdd8840b83821c9fb0
+# Source0-md5:	72d0dc8ff22dc2f85ddf8a0ba28ad01f
 Patch0:		%{name}-paths.patch
 URL:		http://www.samse.fr/GPL/squidclamav/
 BuildRequires:	curl-devel >= 7.12.1
