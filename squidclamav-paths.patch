@@ -1,0 +1,15 @@
+diff -ur squidclamav-1.2.orig/paths.h squidclamav-1.2/paths.h
+--- squidclamav-1.2.orig/paths.h	2005-02-10 22:27:22.000000000 +0100
++++ squidclamav-1.2/paths.h	2005-02-28 00:01:26.000000000 +0100
+@@ -25,9 +25,9 @@
+ 
+ /*************  Log File Locations (must be writable by **********/
+ /*************  the user given in the squid.conf file   **********/
+-#define LOG_FILE "/usr/local/squidclamav/logs/squidclamav.log"
++#define LOG_FILE "/var/log/squid/squidclamav.log"
+ 
+ /*************  Configuration file locations  ***********/
+-#define REDIRECT_PATTERNS "/usr/local/squidclamav/etc/squidclamav.conf"
++#define REDIRECT_PATTERNS "/etc/squidclamav.conf"
+ 
+ #endif
