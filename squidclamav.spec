@@ -1,5 +1,5 @@
 Summary:	A Clamav Antivirus Redirector for Squid
-Summary(pl):	Skaner antywirusowy clamav dla squida
+Summary(pl):	Skaner antywirusowy clamav dla Squida
 Name:		squidclamav
 Group:		Networking/Utilities
 License:	GPL v2
@@ -9,25 +9,26 @@ Source0:	http://www.samse.fr/GPL/squidclamav/%{name}-%{version}.tar.gz
 # Source0-md5:	72d0dc8ff22dc2f85ddf8a0ba28ad01f
 Patch0:		%{name}-paths.patch
 URL:		http://www.samse.fr/GPL/squidclamav/
-BuildRequires:	curl-devel >= 7.12.1
 BuildRequires:	clamav-devel >= 0.82
+BuildRequires:	curl-devel >= 7.12.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-A Clamav Antivirus Redirector for Squid
+A Clamav Antivirus Redirector for Squid.
 
 %description -l pl
-Skaner antywirusowy clamav dla squida
+Skaner antywirusowy clamav dla Squida.
 
 %prep
 %setup -q
 %patch0 -p1
 
 %build
+# XXX: why not system regex?
 cd regex-0.12
 %configure
 %{__make}
-cp regex.h regex.o ../
+cp regex.h regex.o ..
 cd ..
 %{__make}
 
@@ -44,5 +45,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README
-%attr(640,root,squid) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/squidclamav.conf
+%attr(640,root,squid) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/squidclamav.conf
 %attr(755,root,root) %{_bindir}/squidclamav
