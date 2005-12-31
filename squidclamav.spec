@@ -6,10 +6,10 @@ Summary(pl):	Skaner antywirusowy clamav dla Squida
 Name:		squidclamav
 Group:		Networking/Utilities
 License:	GPL v2
-Version:	1.4
+Version:	2.2
 Release:	0.1
 Source0:	http://www.samse.fr/GPL/squidclamav/%{name}-%{version}.tar.gz
-# Source0-md5:	c91fe36319fda07d06f2ef5176f309d8
+# Source0-md5:	ce0bc72413e9aab8e3cf0d057a9b563a
 Patch0:		%{name}-paths.patch
 URL:		http://www.samse.fr/GPL/squidclamav/
 BuildRequires:	clamav-devel >= 0.82
@@ -26,7 +26,7 @@ A Clamav Antivirus Redirector for Squid.
 Skaner antywirusowy clamav dla Squida.
 
 %prep
-%setup -q
+%setup -q -n %{name}
 %patch0 -p1
 
 %build
@@ -50,6 +50,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README INSTALL
+%doc Changelog INSTALL README
 %attr(640,root,squid) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/squidclamav.conf
 %attr(755,root,root) %{_bindir}/squidclamav
