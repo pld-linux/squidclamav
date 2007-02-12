@@ -2,7 +2,7 @@
 # - get rid of internal copies of regex library
 # /TODO
 Summary:	A Clamav Antivirus Redirector for Squid
-Summary(pl):	Skaner antywirusowy clamav dla Squida
+Summary(pl.UTF-8):   Skaner antywirusowy clamav dla Squida
 Name:		squidclamav
 Group:		Networking/Utilities
 License:	GPL v2
@@ -22,7 +22,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 A Clamav Antivirus Redirector for Squid.
 
-%description -l pl
+%description -l pl.UTF-8
 Skaner antywirusowy clamav dla Squida.
 
 %prep
