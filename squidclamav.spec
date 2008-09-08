@@ -7,7 +7,7 @@ Name:		squidclamav
 Group:		Networking/Utilities
 License:	GPL v2
 Version:	3.5
-Release:	1
+Release:	2
 Source0:	http://www.samse.fr/GPL/squidclamav/%{name}-%{version}.tar.gz
 # Source0-md5:	955060d2cf87d5fb9ab05f6c8cf83f56
 URL:		http://www.samse.fr/GPL/squidclamav/
