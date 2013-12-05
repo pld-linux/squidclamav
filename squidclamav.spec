@@ -4,13 +4,14 @@ Summary(pl.UTF-8):	Skaner antywirusowy clamav dla Squida 3.x
 Name:		squidclamav
 Group:		Networking/Utilities
 License:	GPL v3
-Version:	6.2
+Version:	6.10
 Release:	0.1
 Source0:	http://downloads.sourceforge.net/squidclamav/%{name}-%{version}.tar.gz
-# Source0-md5:	4447ce47033f15b4ac7c08829917041a
+# Source0-md5:	a26f3dccb425f046a8002befe242c2a1
 Patch0:		%{name}-build.patch
 Patch1:		%{name}-conf.patch
 URL:		http://squidclamav.darold.net/
+BuildRequires:	c-icap-devel
 Requires:	c-icap
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
